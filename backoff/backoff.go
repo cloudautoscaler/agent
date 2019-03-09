@@ -9,8 +9,8 @@ import (
 // Magnitude specifies the order of magnitude of the delay.
 var Magnitude = time.Second
 
-// On executes passed function applying exponential backoff with jitter on
-// passed function. After specified number of attempts it will give up, returning
+// On executes passed function applying exponential backoff with jitter on it.
+// After specified number of attempts it will give up, returning
 // the last error calling fn.
 func On(fn func() error, retries int) error {
 	var err error
